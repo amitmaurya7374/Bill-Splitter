@@ -25,6 +25,8 @@ class _SplitBillScreenState extends State<SplitBillScreen> {
         backgroundColor: Colors.deepPurple,
       ),
       body: Container(
+        alignment: Alignment.center,
+        margin: EdgeInsets.only(top:MediaQuery.of(context).size.height*0.1),//margin is the outer spacing 
         color: Colors.white,
         child: ListView(
           scrollDirection: Axis.vertical,
@@ -34,8 +36,17 @@ class _SplitBillScreenState extends State<SplitBillScreen> {
               height: 150,
               width: 150,
               decoration: BoxDecoration(
-                color: Colors.purpleAccent.shade100,
+                color: Colors.grey.shade100,
                 borderRadius: BorderRadius.circular(20.0),
+              ),
+              child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text('Total per Person'),
+                    Text('\$123'),
+                  ],
+                ),
               ),
             ),
           ],
